@@ -25,7 +25,6 @@ spec:
         ports:
         - containerPort: 6379
           name: redis
----
 apiVersion: v1
 kind: Service
 metadata:
@@ -35,7 +34,6 @@ spec:
   - port: 6379
   selector:
     app: azure-vote-back
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -65,7 +63,6 @@ spec:
         env:
         - name: REDIS
           value: "azure-vote-back"
----
 apiVersion: v1
 kind: Service
 metadata:
